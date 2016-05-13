@@ -1,0 +1,14 @@
+flask
+flask-compress
+flask-login
+flask-cors
+elasticsearch>=2.3.0,<3.0.0
+unicodecsv
+textblob
+gunicorn
+python-rake
+nltk
+numpy
+lxml
+requests
+requests-cache
