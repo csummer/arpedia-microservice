@@ -1,4 +1,4 @@
-<img src="assets/arpedia-logo.png" alt="Arpedia Logo" width="whatever" height="200px" align="left" >
+<img src="assets/arpedia-logo.png" alt="Arpedia Logo" width="whatever" height="199px" align="left" >
 
 # Arpedia Microservice
 
