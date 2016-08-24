@@ -14,22 +14,64 @@ The fingerprints are created from an annotated corpus (Kadist) which using techn
 
 Each object in the index has a type, each with a format:
 
-# artwork
+# artwork, optional physical (has a location property)
 ```
 {
 	"permalink": "mandatory::<absolute url>",
-	"imgurl": "mandatory::<absolute url>",
+	"images": [{
+		"caption": "mandatory::<text>",
+		"url": "mandatory::<absolute url>"
+	}],
 	"title": "mandatory::<title>",
 	"artist": "mandatory::<artist name>",
 	"artist_data": "optional::<unstructured text>",
+	"location": "optional::<structured location code>",
 	"description": "mandatory::<unstructured text>",
 	"medium": "optional::<unstructured text>",
 	"acquisition": "optional::<unstructured text>",
 	"dimensions": "optional::<unstructured text>",
-	"tags": ["optional::<unstructured text>"],
-	"creation_year": "optional::<year number",
+	"tags": [
+		"optional::<unstructured text>"
+	],	"creation_year": "optional::<year number",
 	"collection": "mandatory::<structured text>"
 }
 ```
 
-# event
+# video, publication
+```
+{
+	"permalink": "mandatory::<absolute url>",
+	"images": [{
+		"caption": "mandatory::<text>",
+		"url": "mandatory::<absolute url>"
+	}],
+	"title": "mandatory::<title>",
+	"creator": "mandatory::<creator name>",
+	"creator_data": "optional::<unstructured text>",
+	"description": "mandatory::<unstructured text>",
+	"tags": [
+		"optional::<unstructured text>"
+	],	"creation_year": "optional::<year number",
+	"collection": "mandatory::<structured text>"
+}
+```
+
+# temporal object (event, exhibition), optional physical (has a location property)
+```
+{
+	"permalink": "mandatory::<absolute url>",
+	"images": [{
+		"caption": "mandatory::<text>",
+		"url": "mandatory::<absolute url>"
+	}],
+	"title": "mandatory::<title>",
+	"start_date": "mandatory::MM/DD/YY>",
+	"end_date": "mandatory::<MM/DD/YY>",
+	"location": "optional::<structured location code>",
+	"description": "mandatory::<unstructured text>",
+	"tags": [
+		"optional::<unstructured text>"
+	],
+	"collection": "mandatory::<structured text>"
+}
+```
