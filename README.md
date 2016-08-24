@@ -9,3 +9,27 @@ Moving all the data pipeline out of the Kadist repository and into this one whic
 The ETL pipeline consists of three parts. Data capture, including scrapes or data dumps, the transformations that occur to unify schemas, enrich data, assign fingerprints, and finally the indexing itself.
 
 The fingerprints are created from an annotated corpus (Kadist) which using techniques like feature reduction and LDA/LSI produces a semantic fingerprinted corpus. Untagged documents (which come from art work descriptions) are then matched to this corpus using standard search techniques (through Lucene) and the fingerprints from those matches are used to join with other untagged content. 
+
+## Data
+
+Each object in the index has a type, each with a format:
+
+# artwork
+```
+{
+	"permalink": "mandatory::<absolute url>",
+	"imgurl": "mandatory::<absolute url>",
+	"title": "mandatory::<title>",
+	"artist": "mandatory::<artist name>",
+	"artist_data": "optional::<unstructured text>",
+	"description": "mandatory::<unstructured text>",
+	"medium": "optional::<unstructured text>",
+	"acquisition": "optional::<unstructured text>",
+	"dimensions": "optional::<unstructured text>",
+	"tags": ["optional::<unstructured text>"],
+	"creation_year": "optional::<year number",
+	"collection": "mandatory::<structured text>"
+}
+```
+
+# event
