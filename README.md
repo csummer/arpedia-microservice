@@ -14,7 +14,7 @@ The fingerprints are created from an annotated corpus (Kadist) which using techn
 
 Each object in the index has a type, each with a format:
 
-### artwork, optional physical (has a location property)
+### Artwork, optional physical (has a location property)
 ```
 {
 	"permalink": "mandatory::<absolute url>",
@@ -37,7 +37,7 @@ Each object in the index has a type, each with a format:
 }
 ```
 
-### video, publication
+### Video, Publication, ...
 ```
 {
 	"permalink": "mandatory::<absolute url>",
@@ -56,7 +56,7 @@ Each object in the index has a type, each with a format:
 }
 ```
 
-### temporal object (event, exhibition), optional physical (has a location property)
+### Temporal object (event, exhibition), optional physical (has a location property)
 ```
 {
 	"permalink": "mandatory::<absolute url>",
